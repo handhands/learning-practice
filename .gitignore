@@ -1,0 +1,8 @@
+*.py[cod]
+*.pyc
+*.so
+*.egg
+*.egg-info
+*.log
+
+.idea/
