@@ -4,7 +4,7 @@
 from socket import *
 from time import ctime
 
-from tcpSocket.conf import ADDR, BUFSIZE
+from conf import ADDR, BUFSIZE
 
 tcpSerSock = socket(AF_INET, SOCK_STREAM)
 tcpSerSock.bind(ADDR)
@@ -19,7 +19,7 @@ while True:
         data = tcpCliSock.recv(BUFSIZE)
         if not data:
             break
-        tcpCliSock.send('[%s]  %s'(ctime(), data))
+        tcpCliSock.send('[%s]  %s' % (ctime(), data))
 
         tcpCliSock.close()
 
